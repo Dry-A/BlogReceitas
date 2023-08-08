@@ -15,10 +15,5 @@ public class ReceitaController {
     @Autowired
     private ReceitaDAO  minhaReceitaDao;
 
-
-
-
-
-
     
 }
