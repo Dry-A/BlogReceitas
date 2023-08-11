@@ -19,16 +19,19 @@ public class Receita {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(nullable = false)
     private Long id;
+
     @NotBlank(message = "Título é obrigatório! ")
    private String titulo;
+
     @NotBlank(message = "Descrever os ingredientes é brigatório! ")
    private String ingredientes;
+
     @NotBlank(message = "Modo de Preparo é obrigatório! ")
    private String modoPreparo;
-    @NotBlank(message = "Informações Adicionais são opcionais ")
-   private String infoAdicionais;
+
+    private String infoAdicionais;
+
     @UpdateTimestamp
    private LocalDate data;
 
@@ -48,4 +51,5 @@ public class Receita {
     public final int hashCode() {
         return this instanceof HibernateProxy ? ((HibernateProxy) this).getHibernateLazyInitializer().getPersistentClass().hashCode() : getClass().hashCode();
     }
+
 }
