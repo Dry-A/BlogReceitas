@@ -4,14 +4,12 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
 import com.audrey.blogreceitas.repository.ReceitaRepository;
 import com.audrey.blogreceitas.model.Receita;
 
@@ -21,20 +19,26 @@ import com.audrey.blogreceitas.model.Receita;
 public class ReceitaController {
 
     @Autowired
-    private ReceitaRepository bananinhaRepository ;
+    private ReceitaRepository bananinhaRepository;
 
     @GetMapping
-    public ResponseEntity<List<Receita>> getAll(){
+    public ResponseEntity<List<Receita>> getAll() {
 
         return ResponseEntity.ok(bananinhaRepository.findAll());
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Receita> getById(@PathVariable Long id){
-       
-        return bananinhaRepository.findById(id).map(resposta -> ResponseEntity.ok(resposta)).orElse(ResponseEntity.status(HttpStatus.NOT_FOUND).build());
+    public ResponseEntity<Receita> getById(@PathVariable Long id) {
+
+        return bananinhaRepository.findById(id).map(resposta -> ResponseEntity.ok(resposta))
+                .orElse(ResponseEntity.status(HttpStatus.NOT_FOUND).build());
 
     }
 
-    
+    @GetMapping("/titulo/{titulo}")
+    public ResponseEntity<List<Receita>> getByTitulo(@PathVariable String titulo) {
+
+        return ResponseEntity.ok(bananinhaRepository.findAllByTituloContainingIgnoreCase(titulo));
+    }
+
 }
