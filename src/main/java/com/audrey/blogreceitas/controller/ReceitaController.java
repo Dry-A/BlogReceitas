@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -42,10 +43,20 @@ public class ReceitaController {
 
         return ResponseEntity.ok(bananinhaRepository.findAllByTituloContainingIgnoreCase(titulo));
     }
-@PostMapping
-	public ResponseEntity<Receita> post(@Valid @RequestBody Receita receita) {
-		return ResponseEntity.status(HttpStatus.CREATED)
-				.body(bananinhaRepository.save(receita));
-	}
+
+    @PostMapping
+    public ResponseEntity<Receita> post(@Valid @RequestBody Receita receita) {
+        return ResponseEntity.status(HttpStatus.CREATED)
+                .body(bananinhaRepository.save(receita));
+    }
+
+    @PutMapping
+    public ResponseEntity<Receita> put(@Valid @RequestBody Receita receita) {
+
+        return bananinhaRepository.findById(receita.getId())
+                .map(resposta -> ResponseEntity.status(HttpStatus.OK)
+                        .body(bananinhaRepository.save(receita)))
+                .orElse(ResponseEntity.status(HttpStatus.NOT_FOUND).build());
+    }
 
 }
