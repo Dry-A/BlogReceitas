@@ -18,6 +18,11 @@ Segurança da aplicação. Os recursos serão implementados na mesma sequência 
 localizado na Source Folder src/main/resources</strong></h3>
 
 <img  style="margin-top:20px" src="https://i.imgur.com/SrMCJ4e.png">
+<br><br><br>
+<h3>Neste projeto utilizei o VSCode por ter uma ótima integração com Git, como pode ser observado nessa imagem: </h3>
+<img  style="margin-top:20px" src="https://i.imgur.com/oYmVinG.png">
+
+
 
 <img  style="margin-top:20px" src="https://i.imgur.com/DEcXftI.png">
 
@@ -30,3 +35,11 @@ localizado na Source Folder src/main/resources</strong></h3>
 <img  style="margin-top:20px" src="https://i.imgur.com/2Sbb2K6.png">
 
 <img  style="margin-top:20px" src="https://i.imgur.com/ILaDN2B.png">
+<br><br>
+<h3>Criaçao da classe Categoria</h3>
+
+<img  style="margin-top:20px" src="https://i.imgur.com/NNX5EcS.png">
+
+<br><br>
+<h3>Com o projeto em execução, inseri valores na tabela Categoria pelo MySql Workbench:</h3>
+<img  style="margin-top:20px" src="https://i.imgur.com/YDERtbP.png">
