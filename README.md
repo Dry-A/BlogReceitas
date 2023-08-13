@@ -71,3 +71,6 @@ A Classe Receita será o <strong>lado N:1,</strong> ou seja, Muitas Receitas pod
 <img  style="margin-top:20px" src="https://i.imgur.com/N4BLNNG.png">
 <img  style="margin-top:20px" src="https://i.imgur.com/fiPdydq.png">
 <img  style="margin-top:20px" src="https://i.imgur.com/E4bpEpb.png">
+
+<h2>O relacionamento entre as classes visto no GET: </h2>
+<img  style="margin-top:20px" src="https://i.imgur.com/DhuU9Pj.png">
