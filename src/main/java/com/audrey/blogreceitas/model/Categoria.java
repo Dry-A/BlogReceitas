@@ -26,6 +26,4 @@ public class Categoria {
     @NotBlank(message = "Nome da Categoria é Obrigatório!!!")
     private String nome;
 
-    
-    
 }
