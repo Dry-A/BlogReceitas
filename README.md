@@ -14,6 +14,9 @@ mapear um tipo de Objeto e persistir no Banco de dados Relacional) e uma Classe 
 uma tabela no Banco de dados da aplicação, ela servirá de Classe auxiliar na implementação da
 Segurança da aplicação. Os recursos serão implementados na mesma sequência da tabela acima</h3>
 
+ <h3 style="color: green"> <strong>Foram utilizadas 6 dependências: Spring Web, Spring Boot Dev Tools, Lombok, Spring Data JPA, MySQL Driver e Validation. A configuração do Banco de dados será implementada no arquivo application.properties,
+localizado na Source Folder src/main/resources</strong></h3>
+
 <img  style="margin-top:20px" src="https://i.imgur.com/SrMCJ4e.png">
 
 <img  style="margin-top:20px" src="https://i.imgur.com/DEcXftI.png">
