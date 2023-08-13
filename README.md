@@ -43,3 +43,17 @@ localizado na Source Folder src/main/resources</strong></h3>
 <br><br>
 <h3>Com o projeto em execução, inseri valores na tabela Categoria pelo MySql Workbench:</h3>
 <img  style="margin-top:20px" src="https://i.imgur.com/YDERtbP.png">
+
+
+<h2>Relacionamento de Classes</h2>
+Mapeamento Objeto-Relacional (ORM) é o processo de conversão de Objetos Java em Tabelas (Entidades) de Banco de dados. Em outras palavras, isso nos permite interagir com um Banco de
+dados Relacional sem nenhum código SQL. A Java Persistence API (JPA) é uma especificação que define como persistir dados em aplicativos Java. 
+<br>
+<br>
+O foco principal do JPA é a camada ORM.
+O JPA simplifica o tratamento do modelo de Banco de dados Relacional nos aplicativos Java quando mapeamos cada Tabela para uma única Classe de entidade (Model). No SQL, precisamos criar Relacionamentos entre as tabelas, no JPA também. 
+<img  style="margin-top:20px" src="https://i.imgur.com/sdoeqX1.png">
+
+o Relacionamento Bidirecional (1:N) entre as Classes Categoria e Receita
+
+A Classe Receita será o <strong>lado N:1,</strong> ou seja, Muitas Receitas podem ter apenas <strong>Uma Categoria.</strong> 
