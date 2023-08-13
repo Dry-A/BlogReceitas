@@ -60,6 +60,14 @@ o Relacionamento Bidirecional (1:N) entre as Classes Categoria e Receita
 A Classe Receita será o <strong>lado N:1,</strong> ou seja, Muitas Receitas podem ter apenas <strong>Uma Categoria.</strong> 
 
 <img  style="margin-top:20px" src="https://i.imgur.com/1Ta7ASC.png">
+<br>
 
-<h3>Testando no Insomnia Categorias</h3>
+<h2>Tipos de Cascade -  Utilizei o ALL</h2>
+<br><br>
+<img   src="https://i.imgur.com/8avibSU.png">
+
+<h2>Testes no Insomnia dos verbos HTTP da Classe Categoria: </h2>
 <img  style="margin-top:20px" src="https://i.imgur.com/4UuE2hO.png">
+<img  style="margin-top:20px" src="https://i.imgur.com/N4BLNNG.png">
+<img  style="margin-top:20px" src="https://i.imgur.com/fiPdydq.png">
+<img  style="margin-top:20px" src="https://i.imgur.com/E4bpEpb.png">
