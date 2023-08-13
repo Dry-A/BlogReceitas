@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
+import com.audrey.blogreceitas.repository.CategoriaRepository;
 import com.audrey.blogreceitas.repository.ReceitaRepository;
 import jakarta.validation.Valid;
 import com.audrey.blogreceitas.model.Receita;
@@ -28,18 +29,21 @@ import com.audrey.blogreceitas.model.Receita;
 public class ReceitaController {
 
     @Autowired
-    private ReceitaRepository bananinhaRepository;
+    private ReceitaRepository receitaRepository;
+
+    @Autowired
+    private CategoriaRepository categoriaRepository;
 
     @GetMapping
     public ResponseEntity<List<Receita>> getAll() {
 
-        return ResponseEntity.ok(bananinhaRepository.findAll());
+        return ResponseEntity.ok(receitaRepository.findAll());
     }
 
     @GetMapping("/{id}")
     public ResponseEntity<Receita> getById(@PathVariable Long id) {
 
-        return bananinhaRepository.findById(id).map(resposta -> ResponseEntity.ok(resposta))
+        return receitaRepository.findById(id).map(resposta -> ResponseEntity.ok(resposta))
                 .orElse(ResponseEntity.status(HttpStatus.NOT_FOUND).build());
 
     }
@@ -47,35 +51,47 @@ public class ReceitaController {
     @GetMapping("/titulo/{titulo}")
     public ResponseEntity<List<Receita>> getByTitulo(@PathVariable String titulo) {
 
-        return ResponseEntity.ok(bananinhaRepository.findAllByTituloContainingIgnoreCase(titulo));
+        return ResponseEntity.ok(receitaRepository.findAllByTituloContainingIgnoreCase(titulo));
     }
 
     @PostMapping
     public ResponseEntity<Receita> post(@Valid @RequestBody Receita receita) {
-        return ResponseEntity.status(HttpStatus.CREATED)
-                .body(bananinhaRepository.save(receita));
+
+        if (categoriaRepository.existsById(receita.getCategoria().getId()))
+
+            return ResponseEntity.status(HttpStatus.CREATED)
+                    .body(receitaRepository.save(receita));
+
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
     }
 
     @PutMapping
     public ResponseEntity<Receita> put(@Valid @RequestBody Receita receita) {
 
-        return bananinhaRepository.findById(receita.getId())
-                .map(resposta -> ResponseEntity.status(HttpStatus.OK)
-                        .body(bananinhaRepository.save(receita)))
-                .orElse(ResponseEntity.status(HttpStatus.NOT_FOUND).build());
+        if (receitaRepository.existsById(receita.getId())) {
+
+            if (categoriaRepository.existsById(receita.getCategoria().getId()))
+
+                return ResponseEntity.status(HttpStatus.OK)
+                        .body(receitaRepository.save(receita));
+
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
+        }
+
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
     }
 
     @ResponseStatus(HttpStatus.NO_CONTENT)
     @DeleteMapping("/{id}")
     public void delete(@PathVariable Long id) {
-      
-        Optional<Receita> receita = bananinhaRepository.findById(id);
+
+        Optional<Receita> receita = receitaRepository.findById(id);
 
         if (receita.isEmpty())
 
             throw new ResponseStatusException(HttpStatus.NOT_FOUND);
 
-        bananinhaRepository.deleteById(id);
+        receitaRepository.deleteById(id);
 
     }
 
