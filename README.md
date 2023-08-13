@@ -14,4 +14,16 @@ mapear um tipo de Objeto e persistir no Banco de dados Relacional) e uma Classe 
 uma tabela no Banco de dados da aplicação, ela servirá de Classe auxiliar na implementação da
 Segurança da aplicação. Os recursos serão implementados na mesma sequência da tabela acima</h3>
 
+<img  style="margin-top:20px" src="https://i.imgur.com/SrMCJ4e.png">
 
+<img  style="margin-top:20px" src="https://i.imgur.com/DEcXftI.png">
+
+<img  style="margin-top:20px" src="https://i.imgur.com/CL6OYPw.png">
+
+<img  style="margin-top:20px" src="https://i.imgur.com/bMtskM8.png">
+
+<img  style="margin-top:20px" src="https://i.imgur.com/9X9jB9e.png">
+
+<img  style="margin-top:20px" src="https://i.imgur.com/2Sbb2K6.png">
+
+<img  style="margin-top:20px" src="https://i.imgur.com/ILaDN2B.png">
