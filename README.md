@@ -60,3 +60,6 @@ o Relacionamento Bidirecional (1:N) entre as Classes Categoria e Receita
 A Classe Receita será o <strong>lado N:1,</strong> ou seja, Muitas Receitas podem ter apenas <strong>Uma Categoria.</strong> 
 
 <img  style="margin-top:20px" src="https://i.imgur.com/1Ta7ASC.png">
+
+<h3>Testando no Insomnia Categorias</h3>
+<img  style="margin-top:20px" src="https://i.imgur.com/4UuE2hO.png">
