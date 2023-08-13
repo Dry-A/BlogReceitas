@@ -54,6 +54,9 @@ O foco principal do JPA é a camada ORM.
 O JPA simplifica o tratamento do modelo de Banco de dados Relacional nos aplicativos Java quando mapeamos cada Tabela para uma única Classe de entidade (Model). No SQL, precisamos criar Relacionamentos entre as tabelas, no JPA também. 
 <img  style="margin-top:20px" src="https://i.imgur.com/sdoeqX1.png">
 
+
 o Relacionamento Bidirecional (1:N) entre as Classes Categoria e Receita
 
 A Classe Receita será o <strong>lado N:1,</strong> ou seja, Muitas Receitas podem ter apenas <strong>Uma Categoria.</strong> 
+
+<img  style="margin-top:20px" src="https://i.imgur.com/1Ta7ASC.png">
