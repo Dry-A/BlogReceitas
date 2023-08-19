@@ -4,10 +4,8 @@ import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import lombok.*;
 import org.hibernate.annotations.UpdateTimestamp;
-import org.hibernate.proxy.HibernateProxy;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import java.time.LocalDate;
-import java.util.Objects;
 
 @Getter
 @Setter
@@ -43,5 +41,9 @@ public class Receita {
 
         return this.id;
     }
+
+    @ManyToOne
+    @JsonIgnoreProperties("receita")
+    private Usuario usuario;
 
 }
