@@ -2,6 +2,8 @@ package com.audrey.blogreceitas.controller;
 
 import java.util.List;
 import java.util.Optional;
+
+import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -18,7 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 import com.audrey.blogreceitas.model.Categoria;
 import com.audrey.blogreceitas.repository.CategoriaRepository;
-import jakarta.validation.Valid;
+
 
 @RestController
 @RequestMapping("/categorias")
