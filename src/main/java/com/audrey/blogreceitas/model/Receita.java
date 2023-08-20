@@ -1,11 +1,18 @@
 package com.audrey.blogreceitas.model;
 
-import jakarta.persistence.*;
-import jakarta.validation.constraints.NotBlank;
+
 import lombok.*;
 import org.hibernate.annotations.UpdateTimestamp;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import java.time.LocalDate;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+import javax.validation.constraints.NotBlank;
 
 @Getter
 @Setter
