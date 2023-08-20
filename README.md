@@ -71,6 +71,34 @@ A Classe Receita será o <strong>lado N:1,</strong> ou seja, Muitas Receitas pod
 <img  style="margin-top:20px" src="https://i.imgur.com/N4BLNNG.png">
 <img  style="margin-top:20px" src="https://i.imgur.com/fiPdydq.png">
 <img  style="margin-top:20px" src="https://i.imgur.com/E4bpEpb.png">
-
+<br>
+<br>
+<br>
 <h2>O relacionamento entre as classes visto no GET: </h2>
 <img  style="margin-top:20px" src="https://i.imgur.com/DhuU9Pj.png">
+
+<br>
+<br>
+<br>
+<h2>Adiçao do framework Security</h2>
+
+<img  style="margin-top:20px" src="https://i.imgur.com/FpW7wBs.png">
+
+
+
+<br>
+<br>
+<br>
+<h2>Criaçao das Classes Usuario, UsuarioLogin, UsuarioRepository</h2>
+
+
+
+<img  style="margin-top:20px" src="https://i.imgur.com/NnVaAoV.png">
+
+
+<br>
+<br>
+<h3>Agora na tb_receitas temos categoria_id e usuario_id</h3>
+<img  style="margin-top:20px" src="https://i.imgur.com/ewJwwbT.png">
+
+
