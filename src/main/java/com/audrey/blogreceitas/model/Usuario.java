@@ -24,7 +24,6 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
-@RequiredArgsConstructor
 @Entity
 @Table(name = "tb_usuarios")
 public class Usuario {
@@ -50,5 +49,18 @@ public class Usuario {
     @OneToMany(mappedBy = "usuario", cascade = CascadeType.REMOVE)
     @JsonIgnoreProperties("usuario")
     private List<Receita> receita;
+
+
+    public Usuario(Long id, String nome, String foto, String usuario, String senha) {
+        this.id = id;
+        this.nome = nome;
+        this.foto = foto;
+        this.usuario = usuario;
+        this.senha = senha;
+    }
+
+
+     public Usuario() { }
+
 
 }
